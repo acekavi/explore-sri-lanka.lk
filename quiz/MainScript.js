@@ -58,16 +58,20 @@ checkQuizBtn.addEventListener("click", ()=>{
                 const currentRadioBtns = currentValue.querySelectorAll("input");
                 const currentLabels= currentValue.querySelectorAll("label");
 
+                if (getRadioValue(currentRadioBtns) == currAnswer){
+                    score = score + 2;
+                }else{
+                    score--;
+                }
+
                 currentRadioBtns.forEach((currValue, currIndex)=>{
                     if(currValue.checked == true){
                         userAnswer = currValue.value;
                         if (userAnswer == currAnswer){
                             currentLabels[currIndex].classList.add("correct");
-                            score = score + 2;
                         }else{
                             currentLabels[currIndex].classList.add("wrong");
                             currentLabels[currAnswer-1].classList.add("correct");
-                            score--;
                         }
                     }
                     currValue.disabled = true;

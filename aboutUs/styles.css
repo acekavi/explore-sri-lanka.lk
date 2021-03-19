@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,13 +7,100 @@
 }
 
 body {
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   margin-top: 7vh;
+  overflow: hidden;
 }
 
 .mainSection {
   background-color: rgb(255, 255, 255);
   height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.freePik {
+  height: 25rem;
+  margin-right: 9rem;
+}
+
+.mainText {
+  margin-left: 5rem;
+}
+
+.nameList {
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
+.nameList li span {
+  border-left: 2px solid #333;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+.mainText h1 {
+  margin-bottom: 3rem;
+}
+
+#aboutUs {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Footer Styles */
+.footer {
+  width: 100vw;
+  height: 5vh;
+  background: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pageEditor a,
+.pageEditor a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 1s ease;
+}
+
+.pageEditor a:hover {
+  color: #ff6565;
+}
+
+.pageEditor a span {
+  border-left: 3px solid #ff6565;
+  padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainSection {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .freePik {
+    height: auto;
+    width: 15rem;
+    margin: 0;
+  }
+
+  .mainText {
+    margin-left: 1rem;
+  }
+  .mainText h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  #aboutUs {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+  }
 }
