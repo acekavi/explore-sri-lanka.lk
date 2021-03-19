@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(124deg, #a9c9ff 0%, #ffbbec 100%);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.svg-background {
+  z-index: 1;
+}
+
+.top-left-svg {
+  fill: #a9c9ff;
+  transition: all 1s ease-in-out;
+}
+
+.quiz-container {
+  background-image: linear-gradient(62deg, #fff7f4 0%, #dedede 100%);
+  min-height: 75vh;
+  min-width: 75vw;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+
+  font-family: "Rubik", sans-serif;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.quiz-container::-webkit-scrollbar {
+  display: none;
+}
+
+.heading {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerDiv {
+  position: absolute;
+  z-index: 10;
+  left: 10%;
+  top: auto;
+  bottom: auto;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.summary {
+  margin-top: 3rem;
+  font-weight: lighter;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+/* Footer Styles */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 5vh;
+  background: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pageEditor a,
+.pageEditor a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 1s ease;
+}
+
+.pageEditor a:hover {
+  color: #ff6565;
+}
+
+.pageEditor a span {
+  border-left: 3px solid #ff6565;
+  padding-left: 5px;
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  .answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .timerDiv {
+    top: 15%;
+    left: auto;
+    right: auto;
+    border-radius: 0.5rem;
+    background-color: #fff7f4;
+  }
+}
